@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/cstyle.css">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+   
+</head>
+<body>
+
+
+
+ <div class="border">
+  <div class="main">
+     <div id="title">
+         <h1>CALCULATOR</h1>
+     </div>
+     <div>
+         <input type="text" id="result" >
+     </div>
+     <div class="row">
+         <button  class="btn right" value="AC" onclick="clrscr()">AC</button>
+         <button class="btn" value="-" onclick="dis('-')">+/-</button>
+         <button class="btn" value="%" onclick="dis('%')">%</button>
+         <button class="btn" value="/" onclick="dis('/')" id="op">/</button>
+     </div>
+     <div class="row">
+        <button class="btn right" value="7" onclick="dis('7')">7</button>
+        <button class="btn" value="8" onclick="dis('8')">8</button>
+        <button class="btn" value="9" onclick="dis('9')" >9</button>
+        <button class="btn"  value="*" id="op"  onclick="dis('*')">*</button>
+     </div>
+     <div class="row">
+        <button class="btn right" value="4" onclick="dis('4')">4</button>
+        <button class="btn" value="5" onclick="dis('5')">5</button>
+        <button class="btn" value="6"onclick="dis('6')">6</button>
+        <button class="btn" value="-" id="op"  onclick="dis('-')">-</button>
+     </div>
+      <div class="row">
+        <button class="btn right" value="1" onclick="dis('1')">1</button>
+        <button class="btn" value="2" onclick="dis('2')">2</button>
+        <button class="btn" value="3" onclick="dis('3')">3</button>
+        <button class="btn" value="+" id="op"  onclick="dis('+')">+</button>
+     </div>
+     <div class="row4">
+        <button class="btn right" id="bt" value="0" onclick="dis('0')">0</button>
+        <button class="btn" value="." onclick="dis('.')">.</button>
+        <button class="btn" value="=" id="op" onclick="compute()">=</button>
+     </div>
+  </div>
+   </div>
+   
+   <script>
+    
+    function dis(val) {
+    document.getElementById("result").value+=val;
+}
+function compute(){
+    let x=document.getElementById("result").value;
+    let y =eval(x);
+    document.getElementById("result").value=y;
+    
+}
+function clrscr(){
+    document.getElementById("result").value="";
+}
+    
+    </script>
+    
+</body>
+</html>
